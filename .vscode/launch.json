@@ -1,0 +1,46 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Live Lambda",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/node_modules/serverless/bin/serverless",
+      "stopOnEntry": false,
+      "args": [
+        "invoke",
+        "local",
+        "-f",
+        "publishSns",
+      ],
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector",
+      "outFiles": [
+        "${workspaceFolder}/.webpack/**/*.js"
+      ]
+    },
+    {
+      "name": "Debug ts mocha",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+      "stopOnEntry": false,
+      "args": [
+        "--no-timeouts",
+        "--compilers",
+        "ts:ts-node/register",
+        "${workspaceRoot}/*.spec.ts",
+        "--require",
+        "mocha.env"
+      ],
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector",
+      "outFiles": [
+        "${workspaceFolder}/.webpack/**/*.js"
+      ]
+    },
+  ]
+}
