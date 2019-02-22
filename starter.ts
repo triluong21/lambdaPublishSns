@@ -1,8 +1,10 @@
 import { SNS } from "aws-sdk";
 
 export function publishSNSMessage(sendMessage: any): void {
+  console.log("Start to getSNSClient");
   const client = getSNSClient();
   const params = sendMessage;
+  console.log("Start to publish SNS");
   client.publish(params).promise()
     .then((data: any) => {
       console.log(data.MessageId);

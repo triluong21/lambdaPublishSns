@@ -25,8 +25,11 @@ functions:
     iamRoleStatementsInherit: true
     iamRoleStatements:
       - Effect: Allow
-        Action:
-          - sns:Publish
+      - Action:
+          - sns: Publish
+          - sns: Subscribe
+      - Resource: 
+          - Ref: "arn:aws:sns:us-east-2:160116285639:PublishToSNS" 
     events:
       - http:
           method: get
