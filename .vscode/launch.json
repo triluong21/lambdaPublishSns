@@ -14,7 +14,7 @@
         "AWS_PROFILE": "personal",
         "AWS_REGION": "us-east-2",
         "Region": "us-east-2",
-        "AccountId": "160116285639",
+        "AccountId": "xxxxxxxxxxxx",
       },      
       "args": [
         "invoke",
@@ -38,7 +38,7 @@
         "AWS_PROFILE": "personal",
         "AWS_REGION": "us-east-2",
         "Region": "us-east-2",
-        "AccountId": "160116285639",
+        "AccountId": "xxxxxxxxxxxx",
       },
       "args": [
         "--timeout",
