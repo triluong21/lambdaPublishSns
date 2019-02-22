@@ -10,6 +10,12 @@
       "request": "launch",
       "program": "${workspaceRoot}/node_modules/serverless/bin/serverless",
       "stopOnEntry": false,
+      "env": {
+        "AWS_PROFILE": "personal",
+        "AWS_REGION": "us-east-2",
+        "Region": "us-east-2",
+        "AccountId": "160116285639",
+      },      
       "args": [
         "invoke",
         "local",
@@ -28,13 +34,21 @@
       "request": "launch",
       "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
       "stopOnEntry": false,
+      "env": {
+        "AWS_PROFILE": "personal",
+        "AWS_REGION": "us-east-2",
+        "Region": "us-east-2",
+        "AccountId": "160116285639",
+      },
       "args": [
-        "--no-timeouts",
-        "--compilers",
-        "ts:ts-node/register",
-        "${workspaceRoot}/*.spec.ts",
+        "--timeout",
+        "999999",
         "--require",
-        "mocha.env"
+        "ts-node/register",
+        "--recursive",
+        "${workspaceRoot}/test/*.spec.ts"
+        // "--require",
+        // "mocha.env"
       ],
       "cwd": "${workspaceRoot}",
       "protocol": "inspector",

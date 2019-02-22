@@ -2,13 +2,13 @@
 import { APIGatewayEvent, Callback, Context, Handler } from "aws-lambda";
 import * as chai from "chai";
 import * as mocha from "mocha";
-import { publishSns } from "./handler";
+import { publishSns } from "../handler";
 
 const expect = chai.expect;
 const should = chai.should();
 
 // import { expect } from "chai";
-import { publishSNSMessage } from "./starter";
+import { publishSNSMessage } from "../starter";
 
 describe("Test API call", () => {
   it("run sns publish", async () => {
@@ -29,7 +29,8 @@ describe("Test API call", () => {
 //       publishSns(textx, nullx, (error: Error, result: any) => {
 //         expect(error).to.be.eql(null);
 //         result.body.should.equal(
-//           '{"message":"Go Serverless Webpack (Typescript) v1.0! Your function executed successfully!","input":null}');
+//           '{"message":"Go Serverless Webpack (Typescript) v1.0!
+//            Your function executed successfully!","input":null}');
 //       });
 //     });
 //   });
