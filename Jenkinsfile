@@ -1,6 +1,8 @@
 import groovy.json.JsonSlurper
 
-node ('docker') {
+pipelinenode {
+  agent any
+  tools {nodejs "node"}
   try {
       noeHelper()
       stage('Checkout') {
