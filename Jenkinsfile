@@ -1,5 +1,4 @@
 import groovy.json.JsonSlurper
-
 pipeline {
   agent any
   tools {nodejs "node"}
@@ -7,13 +6,19 @@ pipeline {
       nodeHelper()
       stages {
       stage('Checkout') {
-        gitVars = checkout scm
+        steps {
+          gitVars = checkout scm
+        }
       }
       stage('Install') {
-        sh 'yarn install'
+        steps {
+          sh 'yarn install'
+        }
       }
       stage('Version') {
-        sh 'npm --version'
+        steps {
+          sh 'npm --version'
+        }
       } 
   }
   } catch (e) { 
