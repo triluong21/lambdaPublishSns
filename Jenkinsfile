@@ -4,7 +4,7 @@ pipeline {
   agent any
   tools {nodejs "node"}
   try {
-      noeHelper()
+      nodeHelper()
       stages {
       stage('Checkout') {
         gitVars = checkout scm
