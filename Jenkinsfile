@@ -12,7 +12,7 @@ node ('docker') {
       stage('Version') {
         sh 'npm --version'
       } 
-  } catch { 
+  } catch (e) { 
       jobSuccess = false
       throw e
   } finally {
