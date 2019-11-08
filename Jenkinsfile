@@ -2,8 +2,6 @@ import groovy.json.JsonSlurper
 pipeline {
   agent any
   tools {nodejs "node"}
-  try {
-      nodeHelper()
       stages {
       stage('Checkout') {
         steps {
@@ -20,13 +18,5 @@ pipeline {
           sh 'npm --version'
         }
       } 
-  }
-  } catch (e) { 
-      jobSuccess = false
-      throw e
-  } finally {
-        stage('Notify') {
-            slackHelper(jobSuccess, gitVars, '#tluong')
-        }
-  }
+      }
 }
