@@ -18,5 +18,6 @@ node ('docker') {
   } finally {
         stage('Notify') {
             slackHelper(jobSuccess, gitVars, '#tluong')
+        }
   }
 }
