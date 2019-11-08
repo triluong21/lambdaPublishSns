@@ -5,11 +5,12 @@ pipeline {
       stage('Checkout') {
         steps {
           checkout scm
+          echo "checkout scm"
         }
       }
       stage('Version') {
         steps {
-          sh 'npm --version'
+          echo "Run Version stage"
         }
       } 
       }
