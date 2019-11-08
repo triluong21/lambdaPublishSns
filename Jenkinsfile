@@ -5,6 +5,7 @@ pipeline {
   tools {nodejs "node"}
   try {
       noeHelper()
+      stages {
       stage('Checkout') {
         gitVars = checkout scm
       }
@@ -14,6 +15,7 @@ pipeline {
       stage('Version') {
         sh 'npm --version'
       } 
+  }
   } catch (e) { 
       jobSuccess = false
       throw e
