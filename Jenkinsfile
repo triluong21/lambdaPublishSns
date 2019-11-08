@@ -7,11 +7,6 @@ pipeline {
           checkout scm
         }
       }
-      stage('Install') {
-        steps {
-          sh 'yarn install'
-        }
-      }
       stage('Version') {
         steps {
           sh 'npm --version'
