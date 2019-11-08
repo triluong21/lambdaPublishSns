@@ -1,6 +1,6 @@
 import groovy.json.JsonSlurper
 
-pipelinenode {
+pipeline {
   agent any
   tools {nodejs "node"}
   try {
