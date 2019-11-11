@@ -1,17 +1,17 @@
 import groovy.json.JsonSlurper
-pipeline {
+node {
   agent any
-      stages {
-      stage('Checkout') {
-        steps {
-          checkout scm
-          echo "checkout scm"
-        }
+  stages {
+    stage('Checkout') {
+      steps {
+        checkout scm
+        echo "checkout scm"
       }
-      stage('Version') {
-        steps {
-          echo "Run Version stage"
-        }
-      } 
+    }
+    stage('Version') {
+      steps {
+        echo "Run Version stage"
       }
+    } 
+  }
 }
