@@ -1,4 +1,3 @@
-import groovy.json.JsonSlurper
 pipeline {
   agent any 
   environment {
@@ -13,10 +12,10 @@ pipeline {
       }
     }
     stage('Display name') {
-      steps { 
         environment {
           FIRSTNAME = "Tri"
-        }
+        }  
+        steps { 
         echo "${HELLO} ${FIRSTNAME} ${LASTNAME}"
       }
     } 
