@@ -10,23 +10,26 @@
   },
   "dependencies": {
     "@types/aws-lambda": "^8.10.19",
-    "@types/chai": "^4.1.7",
-    "@types/mocha": "^5.2.6",
-    "@types/node": "^11.9.1",
+    "@types/chai": "^4.2.4",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.7",
     "aws-lambda": "^0.1.2",
     "babel-loader": "^8.0.5",
     "chai": "^4.2.0",
-    "mocha": "^6.0.1",
+    "mocha": "^6.2.2",
     "serverless": "^1.37.1",
     "serverless-offline": "^4.5.1",
     "serverless-offline-sns": "^0.49.0",
     "serverless-webpack": "^5.2.0",
     "ts-loader": "^5.3.3",
     "ts-node": "^8.0.2",
-    "tslint": "^5.12.1",
+    "tsconfig-paths": "^3.9.0",
+    "tslint": "^5.20.1",
     "typescript": "^3.3.3",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3",
     "webpack-node-externals": "^1.7.2"
-  }
+  },
+  "repository": "git@github.com:triluong21/lambdaPublishSns.git",
+  "author": "Tri Van Luong <43145351+triluong21@users.noreply.github.com>"
 }

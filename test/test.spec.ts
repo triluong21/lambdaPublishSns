@@ -16,7 +16,7 @@ describe("Test API call", () => {
       Message: "Hi Tri Luong",
       TopicArn: "arn:aws:sns:us-east-2:160116285639:PublishToSNS",
     };
-    const expectedReturn = undefined;
+    const expectedReturn: any = undefined;
     const replyMessage = publishSNSMessage(messageToSend);
     expect(replyMessage).to.be.equal(expectedReturn);
   });

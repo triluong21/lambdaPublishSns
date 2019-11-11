@@ -19,5 +19,10 @@ pipeline {
         echo "${HELLO} ${FIRSTNAME} ${LASTNAME}"
       }
     } 
+    stage('Test') {
+      steps {
+        sh 'yarn test'
+      }
+    }
   }
 }
