@@ -1,6 +1,11 @@
 import groovy.json.JsonSlurper
-node {
+pipeline {
+  def singlyQuoted = 'Hello'
+  def doubleQuoted = "Tri"
   agent any
+  environment {
+    LASTNAME = 'Luong'
+  }
   stages {
     stage('Checkout') {
       steps {
@@ -8,9 +13,9 @@ node {
         echo "checkout scm"
       }
     }
-    stage('Version') {
+    stage('Display name') {
       steps {
-        echo "Run Version stage"
+        echo "${singlyQuoted} ${doubleQuoted} ${LASTNAME}"
       }
     } 
   }
