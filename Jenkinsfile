@@ -3,7 +3,7 @@ pipeline {
   agent any 
   environment {
     LASTNAME = 'Luong'
-    singlyQuoted = 'Hello'
+    HELLO = 'Hello'
   }
   stages {
     stage('Checkout') {
@@ -15,9 +15,9 @@ pipeline {
     stage('Display name') {
       steps { 
         environment {
-          doubleQuoted = "Tri"
+          FIRSTNAME = "Tri"
         }
-        echo "${singlyQuoted} ${doubleQuoted} ${LASTNAME}"
+        echo "${HELLO} ${FIRSTNAME} ${LASTNAME}"
       }
     } 
   }
