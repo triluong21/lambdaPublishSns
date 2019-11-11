@@ -1,8 +1,8 @@
 import groovy.json.JsonSlurper
 pipeline {
-  def singlyQuoted = 'Hello'
-  def doubleQuoted = "Tri"
   agent any
+  def singlyQuoted = 'Hello'
+ 
   environment {
     LASTNAME = 'Luong'
   }
@@ -14,7 +14,8 @@ pipeline {
       }
     }
     stage('Display name') {
-      steps {
+      steps { 
+        def doubleQuoted = "Tri"
         echo "${singlyQuoted} ${doubleQuoted} ${LASTNAME}"
       }
     } 
